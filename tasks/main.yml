@@ -10,15 +10,11 @@
 
 - name: Ensure Java is installed.
   become: true
-  yum:
-    name: "java-1.8.0-openjdk"
-    state: present
+  apt: deb="java-1.8.0-openjdk" 
 
 - name: Install Logstash
   become: true
-  yum:
-    name: "/tmp/logstash-{{ logstash_version }}-x86_64.rpm"
-    state: present
+  apt: deb="/tmp/logstash-{{ logstash_version }}-x86_64.rpm" 
 
 - name: Configure startup options
   become: true
