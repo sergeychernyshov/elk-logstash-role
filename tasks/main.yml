@@ -1,5 +1,5 @@
 ---
-- name: "Download Logstash's rpm"
+- name: "Download Logstash's deb"
   get_url:
     #403
     #url: "https://artifacts.elastic.co/downloads/logstash/logstash-{{ logstash_version }}-amd64.deb"
