@@ -8,9 +8,9 @@
   register: download_logstash
   until: download_logstash is succeeded
 
-- name: Ensure Java is installed.
-  become: true
-  apt: deb="java-1.8.0-openjdk" 
+#- name: Ensure Java is installed.
+#  become: true
+#  apt: deb="java-1.8.0-openjdk" 
 
 - name: Install Logstash
   become: true
