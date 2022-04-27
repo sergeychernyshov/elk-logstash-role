@@ -23,11 +23,11 @@
     src: "startup.options.j2"
     dest: "/etc/logstash/startup.options"
     mode: 0644
-
-- name: Create startup scripts
-  become: true
-  command:
-    cmd: /usr/share/logstash/bin/system-install /etc/logstash/startup.options systemd
+#
+#- name: Create startup scripts
+#  become: true
+#  command:
+#    cmd: /usr/share/logstash/bin/system-install /etc/logstash/startup.options systemd
 
 - name: Create Logstash configuration files.
   become: true
