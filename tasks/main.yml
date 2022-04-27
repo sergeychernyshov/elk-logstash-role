@@ -3,7 +3,7 @@
   get_url:
     #403
     #url: "https://artifacts.elastic.co/downloads/logstash/logstash-{{ logstash_version }}-x86_64.rpm"
-    url: https://ntl.run0ut.ru/cicd/logstash-{{ logstash_version }}-x86_64.rpm
+    url: https://ntl.run0ut.ru/cicd/logstash-{{ logstash_version }}-x86_64.deb
     dest: "/tmp/logstash-{{ logstash_version }}-x86_64.rpm"
     mode: 0755
   register: download_logstash
@@ -15,7 +15,7 @@
 
 - name: Install Logstash
   become: true
-  apt: deb="/tmp/logstash-{{ logstash_version }}-x86_64.rpm" 
+  apt: deb="/tmp/logstash-{{ logstash_version }}-x86_64.deb" 
 
 - name: Configure startup options
   become: true
